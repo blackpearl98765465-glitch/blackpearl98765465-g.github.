@@ -1,0 +1,426 @@
+
+Black Pearl <blackpearl09876543210@gmail.com>
+2:21 AM (0 minutes ago)
+to me
+
+<!DOCTYPE html>
+<html lang="ur" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اردو تشریح ہب - Urdu Tashreeh Hub</title>
+    
+    <!-- Google Urdu Font (Noto Nastaliq) & Google Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --primary-accent: #059669;
+            --primary-light: #ecfdf5;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            --header-bg: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --primary-accent: #10b981;
+            --primary-light: #064e3b;
+            --border-color: #334155;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --header-bg: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background: var(--header-bg);
+            color: white;
+            padding: 3rem 1rem 4rem 1rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 2.8rem;
+            margin: 0 0 10px 0;
+            line-height: 1.8;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Container */
+        .container {
+            max-width: 850px;
+            margin: -30px auto 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Controls (Search & Category Filters) */
+        .controls-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+            margin-bottom: 15px;
+        }
+
+        .search-box:focus {
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag-btn {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .tag-btn.active, .tag-btn:hover {
+            background: var(--primary-accent);
+            color: white;
+            border-color: var(--primary-accent);
+        }
+
+        /* Poetry Card */
+        .poetry-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .poet-badge {
+            background: var(--primary-light);
+            color: var(--primary-accent);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--primary-accent);
+            color: var(--primary-accent);
+        }
+
+        .shair-box {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 1.7rem;
+            text-align: center;
+            line-height: 2.3;
+            color: var(--text-primary);
+            direction: rtl;
+            margin: 20px 0 25px 0;
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--primary-accent);
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            margin-top: 20px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .meaning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .meaning-item {
+            background: var(--bg-color);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .meaning-item b {
+            color: var(--text-primary);
+        }
+
+        .description-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.1rem; }
+            .shair-box { font-size: 1.4rem; line-height: 2.1; }
+            .container { padding: 0 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span>
+    </button>
+    <h1>اردو تشریح ہب</h1>
+    <p>Read Famous Urdu Ash'ar with Word Meanings & Deep Tashreeh</p>
+</header>
+
+<div class="container">
+
+    <!-- Search & Filter Controls -->
+    <div class="controls-card">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔎 Search by Poet Name, Shair, or Keyword..." onkeyup="filterPoetry()">
+        <div class="filter-tags">
+            <button class="tag-btn active" onclick="filterCategory('all', this)">All Poets</button>
+            <button class="tag-btn" onclick="filterCategory('Mirza Ghalib', this)">Mirza Ghalib</button>
+            <button class="tag-btn" onclick="filterCategory('Allama Iqbal', this)">Allama Iqbal</button>
+            <button class="tag-btn" onclick="filterCategory('Mir Taqi Mir', this)">Mir Taqi Mir</button>
+        </div>
+    </div>
+
+    <!-- Poetry Container -->
+    <div id="poetryList">
+
+        <!-- Card 1: Ghalib -->
+        <div class="poetry-card" data-poet="Mirza Ghalib">
+            <div class="card-header">
+                <span class="poet-badge">Mirza Ghalib (میرزا غالب)</span>
+                <button class="copy-btn" onclick="copyShair(this)">📋 Copy Shair</button>
+            </div>
+            
+            <div class="shair-box">
+                دلِ ناداں تجھے ہوا کیا ہے؟<br>
+                آخر اس درد کی دوا کیا ہے؟
+            </div>
+
+            <div class="section-title">Mushkil Alfaaz ke Maani</div>
+            <div class="meaning-grid">
+                <div class="meaning-item"><b>Dil-e-nadaan:</b> Inexperienced / Innocent heart</div>
+                <div class="meaning-item"><b>Dawa:</b> Cure / Treatment</div>
+            </div>
+
+            <div class="section-title">Mafhoom (Summary)</div>
+            <p class="description-text">Ghalib apne dil se sawal karte hain ki aakhir iski restless condition aur dard ki wajah kya hai aur iska ilaj kya ho sakta hai.</p>
+
+            <div class="section-title">Detailed Tashreeh (تشریح)</div>
+            <p class="description-text">Is shair me Mirza Ghalib apne dil se ek dost ki tarah mukhatib hain. Woh apne bechain dil se poochte hain ki use kya takleef hai. Ghalib ne dil ko "nadaan" isliye kaha hai kyunki dil aisi cheezon ki tamanna karta hai jo uske bas me nahi hain. Is shair me insani jazbaat aur uski majboori ko bohot khoobsurati se bayan kiya gaya hai.</p>
+        </div>
+
+        <!-- Card 2: Iqbal -->
+        <div class="poetry-card" data-poet="Allama Iqbal">
+            <div class="card-header">
+                <span class="poet-badge">Allama Iqbal (علامہ اقبال)</span>
+                <button class="copy-btn" onclick="copyShair(this)">📋 Copy Shair</button>
+            </div>
+            
+            <div class="shair-box">
+                خودی کو کر بلند اتنا کہ ہر تقدیر سے پہلے<br>
+                خدا بندے سے خود پوچھے بتا تیری رضا کیا ہے
+            </div>
+
+            <div class="section-title">Mushkil Alfaaz ke Maani</div>
+            <div class="meaning-grid">
+                <div class="meaning-item"><b>Khudi:</b> Self-respect / Self-worth</div>
+                <div class="meaning-item"><b>Raza:</b> Will / Wish</div>
+            </div>
+
+            <div class="section-title">Mafhoom (Summary)</div>
+            <p class="description-text">Iqbal kehte hain ki insaan ko apni shakhsiyat aur khud-aagahi ko is darje par le jana chahiye ki kismat likhne se pehle Khuda uski khwahish pooche.</p>
+
+            <div class="section-title">Detailed Tashreeh (تشریح)</div>
+            <p class="description-text">Allama Iqbal ka yeh shair insaan ko mehnat aur self-determination ka paigham deta hai. "Khudi" ka matlab hai khud ko pehchanna. Iqbal ka manna hai ki jab insaan apne andar ke potentials ko jagata hai aur mehnat karta hai, toh uski kismat uske apne haathon me hoti hai.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© Urdu Tashreeh Hub — Powered by GitHub Pages</p>
+</footer>
+
+<script>
+    // Theme Toggle Functionality
+    function toggleTheme() {
+        const html = document.documentElement;
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        
+        if (html.getAttribute('data-theme') === 'dark') {
+            html.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '🌙';
+            themeText.textContent = 'Dark Mode';
+        } else {
+            html.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Light Mode';
+        }
+    }
+
+    // Live Search Functionality
+    function filterPoetry() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.poetry-card');
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(query)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Category Filter Buttons
+    function filterCategory(poetName, btn) {
+        document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.poetry-card');
+        cards.forEach(card => {
+            if (poetName === 'all' || card.getAttribute('data-poet') === poetName) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Copy Shair Feature
+    function copyShair(button) {
+        const card = button.closest('.poetry-card');
+        const shairText = card.querySelector('.shair-box').innerText;
+        
+        navigator.clipboard.writeText(shairText).then(() => {
+            const originalText = button.innerText;
+            button.innerText = '✅ Copied!';
+            button.style.borderColor = '#10b981';
+            button.style.color = '#10b981';
+            
+            setTimeout(() => {
+                button.innerText = originalText;
+                button.style.borderColor = '';
+                button.style.color = '';
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
